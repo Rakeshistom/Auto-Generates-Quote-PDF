@@ -24,6 +24,7 @@ private class generateQuotePdfDocumentTest {
         op.Name = 'Test';
         op.RecordTypeId = rt.Id;
         op.Type = 'Value Proposition';
+        op.Amount= 1200;
         op.CloseDate = Date.today().addDays(2);
         op.StageName = 'Created';
         
@@ -54,5 +55,4 @@ private class generateQuotePdfDocumentTest {
         update quote;
     }
     
-
 }
