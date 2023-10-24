@@ -48,11 +48,12 @@ private class generateQuotePdfDocumentTest {
     
     @isTest
     static void generateQuotePdfTest() {
-        
+        Test.startTest();
         Quote quote = [SELECT Id, Status FROM Quote LIMIT 1];
+        List<Id> QuoteId = New List<Id>{quote.id};
+            generateQuotePdfDocument.createQuoteFutureMethod(QuoteId);
         
-        quote.Status = 'Draft';
-        update quote;
+        Test.stopTest();
     }
     
 }
